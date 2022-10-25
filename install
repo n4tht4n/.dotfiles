@@ -17,6 +17,11 @@ ln -sf "$BASEDIR/zsh/my_scripts.zsh" "$ZDOTDIR"
 rm -rf "$HOME/.config/zsh/external"
 ln -sf "$BASEDIR/zsh/external" "$ZDOTDIR"
 
+### git ###
+mkdir -p "$XDG_CONFIG_HOME/git"
+ln -sf "$BASEDIR/git/config" "$XDG_CONFIG_HOME/git"
+ln -sf "$BASEDIR/git/ignore" "$XDG_CONFIG_HOME/git"
+
 ### kitty ###
 mkdir -p "$XDG_CONFIG_HOME/kitty"
 ln -sf "$BASEDIR/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty"
