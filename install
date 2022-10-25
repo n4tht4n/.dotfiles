@@ -32,5 +32,10 @@ ln -sf "$BASEDIR/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
 mkdir -p "$XDG_CONFIG_HOME/tmuxp"
 ln -sf "$BASEDIR/tmuxp/dotfiles.yml" "$XDG_CONFIG_HOME/tmuxp"
 
+### neovim ###
+mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
+ln -sf "$BASEDIR/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
+ln -sf "$BASEDIR/nvim/lua" "$XDG_CONFIG_HOME/nvim/lua"
+
 echo "Bootstrapping done, please RESTART YOUR TERMINAL and enjoy coding 🚀"
 
