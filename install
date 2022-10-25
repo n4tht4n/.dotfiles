@@ -1,0 +1,21 @@
+#!/bin/bash
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "Bootstrapping my .dotfiles from '$BASEDIR'..."
+
+### preparation ###
+ln -sf "$BASEDIR/.zshenv" "$HOME"
+source "$HOME/.zshenv"
+
+### zsh ###
+mkdir -p "$ZDOTDIR"
+ln -sf "$BASEDIR/zsh/.zshenv" "$ZDOTDIR"
+ln -sf "$BASEDIR/zsh/.zshrc" "$ZDOTDIR"
+ln -sf "$BASEDIR/zsh/aliases" "$ZDOTDIR"
+ln -sf "$BASEDIR/zsh/my_scripts.zsh" "$ZDOTDIR"
+rm -rf "$HOME/.config/zsh/external"
+ln -sf "$BASEDIR/zsh/external" "$ZDOTDIR"
+
+echo "Bootstrapping done, please RESTART YOUR TERMINAL and enjoy coding 🚀"
+
