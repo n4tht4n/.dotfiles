@@ -1,0 +1,45 @@
+# Type `alias` to see a list of all known aliases...
+
+alias ..='cd ..'
+
+# Use `bat` instead of `cat` (on Ubuntu, it could be installed as `batcat`!)
+#alias cat='bat --paging=never'
+type batcat &> /dev/null && alias bat=batcat
+type bat &> /dev/null && alias cat=bat
+
+### exa instead of ls ###
+type exa &> /dev/null && alias ls='exa'
+type exa &> /dev/null && alias ll='exa -lFhg --time-style=long-iso'
+type exa &> /dev/null && alias la='exa -lFhg --time-style=long-iso --all'
+
+### Neovim ###
+alias vi='nvim'
+alias vim='nvim'
+
+### Git ###
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gp='git push'
+alias gs='git status'
+alias glol='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+
+### Timewarrior ###
+type timew &> /dev/null && alias tw=timew
+
+type timew &> /dev/null && alias tws='timew summary'
+type timew &> /dev/null && alias twsi='timew summary :ids'
+type timew &> /dev/null && alias twsy='timew summary :yesterday'
+
+type timew &> /dev/null && alias twd='timew day'
+type timew &> /dev/null && alias tww='timew week'
+type timew &> /dev/null && alias twm='timew month'
+
+type timew &> /dev/null && alias twa='timew start'
+type timew &> /dev/null && alias two='timew stop'
+type timew &> /dev/null && alias twc='timew continue'
+type timew &> /dev/null && alias twma='timew modify start'
+type timew &> /dev/null && alias twmo='timew modify end'
+
