@@ -46,6 +46,11 @@ mkdir -p "$XDG_CONFIG_HOME/timewarrior"
 ln -sf "$BASEDIR/timew/timewarrior.cfg" "$XDG_CONFIG_HOME/timewarrior"
 ln -sf "$BASEDIR/timew/themes" "$XDG_CONFIG_HOME/timewarrior" 
 
+### taskwarrior ###
+mkdir -p "$XDG_CONFIG_HOME/task/hooks"
+mkdir -p "$XDG_DATA_HOME/task"
+ln -sf "$BASEDIR/task/taskrc" "$XDG_CONFIG_HOME/task"
+
 #######################################################################################################################
 # BREWING 🍻
 #######################################################################################################################
