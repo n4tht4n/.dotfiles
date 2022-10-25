@@ -5,4 +5,5 @@ require("user.keymaps")
 
 -- plugins
 require("user.lualine")
+require('user.treesitter')
 
