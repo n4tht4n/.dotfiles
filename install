@@ -41,6 +41,11 @@ mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 ln -sf "$BASEDIR/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
 ln -sf "$BASEDIR/nvim/lua" "$XDG_CONFIG_HOME/nvim/lua"
 
+### timewarrior ###
+mkdir -p "$XDG_CONFIG_HOME/timewarrior"
+ln -sf "$BASEDIR/timew/timewarrior.cfg" "$XDG_CONFIG_HOME/timewarrior"
+ln -sf "$BASEDIR/timew/themes" "$XDG_CONFIG_HOME/timewarrior" 
+
 #######################################################################################################################
 # BREWING 🍻
 #######################################################################################################################

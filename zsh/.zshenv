@@ -9,3 +9,5 @@ export HOMEBREW_NO_ANALYTICS=1
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+export TIMEWARRIORDB="$XDG_CONFIG_HOME/timewarrior"
+
