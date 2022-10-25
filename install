@@ -8,6 +8,10 @@ echo "Bootstrapping my .dotfiles from '$BASEDIR'..."
 ln -sf "$BASEDIR/.zshenv" "$HOME"
 source "$HOME/.zshenv"
 
+#######################################################################################################################
+# SETTING UP CONFIGS
+#######################################################################################################################
+
 ### zsh ###
 mkdir -p "$ZDOTDIR"
 ln -sf "$BASEDIR/zsh/.zshenv" "$ZDOTDIR"
@@ -37,5 +41,20 @@ mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 ln -sf "$BASEDIR/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
 ln -sf "$BASEDIR/nvim/lua" "$XDG_CONFIG_HOME/nvim/lua"
 
-echo "Bootstrapping done, please RESTART YOUR TERMINAL and enjoy coding 🚀"
+#######################################################################################################################
+# BREWING 🍻
+#######################################################################################################################
+
+echo -e "\n\tBrewing... 🍻\n"
+sleep 1
+
+### Installing brew? ###
+if ! [ -x "$(command -v brew)" ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+### Installing apps via brew ###
+brew bundle
+
+echo -e "\n\tBootstrapping DONE, please RESTART YOUR TERMINAL and enjoy coding 🚀\n"
 
