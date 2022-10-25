@@ -21,5 +21,11 @@ ln -sf "$BASEDIR/zsh/external" "$ZDOTDIR"
 mkdir -p "$XDG_CONFIG_HOME/kitty"
 ln -sf "$BASEDIR/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty"
 
+### tmux ###
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$BASEDIR/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
+mkdir -p "$XDG_CONFIG_HOME/tmuxp"
+ln -sf "$BASEDIR/tmuxp/dotfiles.yml" "$XDG_CONFIG_HOME/tmuxp"
+
 echo "Bootstrapping done, please RESTART YOUR TERMINAL and enjoy coding 🚀"
 
