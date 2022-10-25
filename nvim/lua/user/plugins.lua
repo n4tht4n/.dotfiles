@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
   use { 'nvim-lua/plenary.nvim' }             -- provides a lot of funcs for other plugins
 
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- status and buffer top bar
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' }}
