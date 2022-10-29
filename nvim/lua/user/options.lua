@@ -31,6 +31,7 @@ vim.opt.colorcolumn = "120"         -- vertical ruler line at this column
 vim.opt.scrolloff = 10              -- minimal number of lines above/below cursor when scrolling top/bottom
 
 vim.opt.updatetime = 50             -- faster reaction time
+vim.opt.signcolumn = 'yes'          -- show sign column in the gutter
 -- }
 
 -- Searching {
