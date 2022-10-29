@@ -8,6 +8,7 @@ tap "homebrew/core"
 brew "bat" if OS.mac?
 brew "exa"
 brew "fzf"
+brew "git"
 brew "git-delta"
 brew "htop"
 brew "jq"
