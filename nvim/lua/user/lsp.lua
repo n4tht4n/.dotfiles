@@ -10,7 +10,7 @@ lsp.nvim_workspace()
 lsp.ensure_installed {
   -- list of available languages: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
   -- and for more language info: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-  'sumneko_lua', 'tsserver'
+  'sumneko_lua', 'tsserver', 'eslint'
 }
 lsp.setup_nvim_cmp {
   formatting = {
@@ -28,13 +28,14 @@ lsp.setup_nvim_cmp {
 }
 lsp.setup()
 
--- give some nicer "icons" for Mason...
+-- use some nicer "icons" and rounded border with Mason...
 require('mason').setup {
   ui = {
     icons = {
       package_installed = "✓",
       package_pending = "➜",
       package_uninstalled = "✗"
-    }
+    },
+    border = "rounded"
   }
 }
