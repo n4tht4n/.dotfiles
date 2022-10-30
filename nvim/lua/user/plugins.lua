@@ -70,8 +70,6 @@ return require('packer').startup(function(use)
 
   use { 'onsails/lspkind.nvim' }
 
-  use { 'jose-elias-alvarez/null-ls.nvim' }
-
   use { 'windwp/nvim-autopairs' }
   use { 'numToStr/Comment.nvim' }
   use { 'kylechui/nvim-surround', tag = '*' }
