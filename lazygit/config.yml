@@ -1,2 +1,12 @@
 gui:
   showIcons: true
+
+  sidePanelWidth: 0.2
+
+git:
+  branchLogCmd: 'git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+  allBranchesLogCmd: 'git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+
+  paging:
+    colorArg: always
+    useConfig: true
