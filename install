@@ -26,6 +26,10 @@ mkdir -p "$XDG_CONFIG_HOME/git"
 ln -sf "$BASEDIR/git/config" "$XDG_CONFIG_HOME/git"
 ln -sf "$BASEDIR/git/ignore" "$XDG_CONFIG_HOME/git"
 
+### lazygit ###
+mkdir -p "$XDG_CONFIG_HOME/lazygit"
+ln -sf "$BASEDIR/lazygit/config.yml" "$XDG_CONFIG_HOME/lazygit"
+
 ### kitty ###
 mkdir -p "$XDG_CONFIG_HOME/kitty"
 ln -sf "$BASEDIR/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty"
@@ -33,7 +37,7 @@ ln -sf "$BASEDIR/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty"
 ### neovim ###
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 ln -sf "$BASEDIR/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
-ln -sf "$BASEDIR/nvim/lua" "$XDG_CONFIG_HOME/nvim/lua"
+ln -sf "$BASEDIR/nvim/lua" "$XDG_CONFIG_HOME/nvim"
 
 ### timewarrior ###
 mkdir -p "$XDG_CONFIG_HOME/timewarrior"
