@@ -41,7 +41,8 @@ require('packer').init({
 return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
-  use { 'nvim-lua/plenary.nvim' } -- provides a lot of funcs for other plugins
+  use { 'christoomey/vim-tmux-navigator' }    -- required for perfect nvim <-> tmux integration
+  use { 'nvim-lua/plenary.nvim' }             -- provides a lot of funcs for other plugins
 
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

@@ -34,6 +34,12 @@ ln -sf "$BASEDIR/lazygit/config.yml" "$XDG_CONFIG_HOME/lazygit"
 mkdir -p "$XDG_CONFIG_HOME/kitty"
 ln -sf "$BASEDIR/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty"
 
+### tmux ###
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$BASEDIR/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
+mkdir -p "$XDG_CONFIG_HOME/tmuxp"
+ln -sf "$BASEDIR/tmuxp/dotfiles.yml" "$XDG_CONFIG_HOME/tmuxp"
+
 ### neovim ###
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 ln -sf "$BASEDIR/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
