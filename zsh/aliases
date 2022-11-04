@@ -23,8 +23,10 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gp='git push'
+alias gl='git pull'
 alias gs='git status'
 alias glol='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias glob='git log $(git branch --show-current) --oneline'
 
 ### Lazygit ###
 alias lg='lazygit'
