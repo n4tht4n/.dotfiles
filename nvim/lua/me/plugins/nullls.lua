@@ -1,4 +1,9 @@
-local null_ls = require('null-ls')
+local status, nullls = pcall(require, 'null-ls')
+if not status then
+  print("Couldn't load 'null-ls' plugin!")
+  return
+end
+
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 -- Builtin sources: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
@@ -6,9 +11,9 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 -- I use `null-ls` just for formatting... If possible, formatters are installed using `Mason`.
 -- Linters and all the other stuff are used directly via LSP...
 
-null_ls.setup({
+nullls.setup({
   sources = {
-    null_ls.builtins.formatting.prettierd
+    nullls.builtins.formatting.prettierd
   },
   on_attach = function(client, bufnr)
     if client.supports_method('textDocument/formatting') then
@@ -17,7 +22,12 @@ null_ls.setup({
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr })
+          vim.lsp.buf.format({
+            filter = function(c)
+              -- only use null-ls for formatting, no other lsp server...
+              return c.name == 'null-ls'
+            end,
+            bufnr = bufnr })
         end,
       })
     end

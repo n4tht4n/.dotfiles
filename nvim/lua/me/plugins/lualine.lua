@@ -1,5 +1,6 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
+local status, lualine = pcall(require, 'lualine')
+if not status then
+  print("Couldn't load 'lualine' plugin!")
   return
 end
 
@@ -17,4 +18,3 @@ lualine.setup({
     lualine_z = {},
   }
 })
-

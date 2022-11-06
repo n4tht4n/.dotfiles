@@ -1,7 +1,13 @@
-require('nvim-treesitter.configs').setup {
-  highlight = {
-    enable = true
-  },
+local status, ts = pcall(require, 'nvim-treesitter.configs')
+if not status then
+  print("Couldn't load 'nvim-treesitter' plugin!")
+  return
+end
+
+ts.setup({
+  highlight = { enable = true },
+  indent = { enable = true },
+  autotag = { enable = true },
   ensure_installed = {
     'javascript',
     'typescript',
@@ -37,5 +43,6 @@ require('nvim-treesitter.configs').setup {
     'vue',
     'yaml',
     'zig'
-  }
-}
+  },
+  auto_install = true,
+})
