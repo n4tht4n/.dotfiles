@@ -1,9 +1,17 @@
 -- create lspkind for nicer completion menu icons 😎
-local lspkind = require('lspkind')
-lspkind.init()
+local lspkind_status, lspkind = pcall(require, 'lspkind')
+if lspkind_status then
+  lspkind.init()
+else
+  print("Couldn't load 'lspkind' plugin for nicer auto-completion icons... ignoring for now!")
+end
 
 -- setup completion stuff via lsp-zero
-local lsp = require('lsp-zero')
+local status, lsp = pcall(require, 'lsp-zero')
+if not status then
+  print("Couldn't load 'lsp-zero' plugin!")
+  return
+end
 
 lsp.preset('recommended')
 lsp.nvim_workspace()

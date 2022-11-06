@@ -2,7 +2,7 @@
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -42,9 +42,10 @@ return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   use { 'christoomey/vim-tmux-navigator' }    -- required for perfect nvim <-> tmux integration
+  use { 'szw/vim-maximizer' }                 -- TODO: find a lua-alternative!?
   use { 'nvim-lua/plenary.nvim' }             -- provides a lot of funcs for other plugins
 
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.x' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'nvim-tree/nvim-tree.lua', required = { 'kyazdani42/nvim-web-devicons' } }
 
@@ -75,8 +76,12 @@ return require('packer').startup(function(use)
   use { 'jose-elias-alvarez/null-ls.nvim' }
 
   use { 'windwp/nvim-autopairs' }
+  use { 'windwp/nvim-ts-autotag' }
+
   use { 'numToStr/Comment.nvim' }
   use { 'kylechui/nvim-surround', tag = '*' }
+  
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- status and buffer top bar
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
@@ -84,6 +89,7 @@ return require('packer').startup(function(use)
   -- themes
   use { 'overcache/NeoSolarized' }
   use { 'Mofiqul/dracula.nvim' }
+  use { 'bluz71/vim-nightfly-guicolors' }
 
   -- automagically set up config after cloning packer.nvim
   -- keep this at the END AFTER ALL PLUGINS!
