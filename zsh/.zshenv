@@ -11,3 +11,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export TIMEWARRIORDB="$XDG_CONFIG_HOME/timewarrior"
 
+export ZSH="$XDG_CONFIG_HOME/zsh/.oh-my-zsh"
+export ZSH_CUSTOM="$ZSH/custom"
+
