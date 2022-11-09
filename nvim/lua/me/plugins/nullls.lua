@@ -13,7 +13,8 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 nullls.setup({
   sources = {
-    nullls.builtins.formatting.prettierd
+    nullls.builtins.formatting.prettierd,
+    nullls.builtins.diagnostics.markdownlint,
   },
   on_attach = function(client, bufnr)
     if client.supports_method('textDocument/formatting') then

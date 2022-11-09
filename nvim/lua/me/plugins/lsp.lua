@@ -18,7 +18,7 @@ lsp.nvim_workspace()
 lsp.ensure_installed {
   -- list of available languages: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
   -- and for more language info: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-  'sumneko_lua', 'tsserver', 'eslint'
+  'sumneko_lua', 'tsserver', 'eslint', 'marksman'
 }
 lsp.setup_nvim_cmp {
   formatting = {
