@@ -80,8 +80,11 @@ return require('packer').startup(function(use)
 
   use { 'numToStr/Comment.nvim' }
   use { 'kylechui/nvim-surround', tag = '*' }
-  
+
   use { 'lewis6991/gitsigns.nvim' }
+
+  -- Markdown preview...
+  use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end, }
 
   -- status and buffer top bar
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }

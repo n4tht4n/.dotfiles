@@ -14,4 +14,5 @@ require('me.plugins.nullls')
 require('me.plugins.autopairs')
 require('me.plugins.treesitter')
 require('me.plugins.gitsigns')
+require('me.plugins.md-preview')
 
