@@ -28,6 +28,7 @@ ts.setup({
     'java',
     'kotlin',
     'markdown',
+    'markdown_inline',
     'proto',
     'python',
     'regex',
