@@ -15,4 +15,5 @@ require('me.plugins.autopairs')
 require('me.plugins.treesitter')
 require('me.plugins.gitsigns')
 require('me.plugins.md-preview')
+require('me.plugins.colorful-winsep')
 
