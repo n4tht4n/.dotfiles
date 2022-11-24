@@ -1,0 +1,69 @@
+{
+  "telemetry.telemetryLevel": "off",
+
+  // better defaults
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.detectIndentation": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "window.nativeFullScreen": false,
+  "window.newWindowDimensions": "inherit",
+  "workbench.editor.enablePreview": false,
+
+  // (opinionated) hide everything
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  //"editor.renderIndentGuides": true,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
+
+  // silence the noise
+  // "editor.codeLens": false,
+  "breadcrumbs.enabled": false,
+  // "scm.diffDecorations": "none",
+  // "editor.hover.enabled": false,
+  // "workbench.tips.enabled": false,
+  // "editor.colorDecorators": false,
+  // "git.decorations.enabled": false,
+  // "workbench.startupEditor": "none",
+  // "editor.lightbulb.enabled": false,
+  // "editor.selectionHighlight": false,
+  // "editor.overviewRulerBorder": false,
+  // "editor.renderLineHighlight": "none",
+  // "editor.occurrencesHighlight": false,
+  // "problems.decorations.enabled": false,
+  // "editor.renderControlCharacters": false,
+  // "editor.hideCursorInOverviewRuler": true,
+  // "editor.gotoLocation.multipleReferences": "goto",
+  // "editor.gotoLocation.multipleDefinitions": "goto",
+  // "editor.gotoLocation.multipleDeclarations": "goto",
+  // "workbench.editor.enablePreviewFromQuickOpen": false,
+  // "editor.gotoLocation.multipleImplementations": "goto",
+  // "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // typography
+//   "workbench.colorTheme": "Palenight Italic",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', FiraCode-Retina, Fira Code",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.suggestSelection": "first",
+  "editor.renderWhitespace": "selection",
+  "editor.tabSize": 2,
+  "editor.rulers": [120],
+//   "editor.lineHeight": 25,
+//   "editor.suggestFontSize": 15,
+//   "editor.suggestLineHeight": 28,
+  "terminal.integrated.fontSize": 15,
+  "workbench.colorTheme": "Palenight Theme",
+//   "terminal.integrated.lineHeight": 1
+
+  // window settings
+  // "window.nativeTabs": true,
+}
