@@ -30,5 +30,6 @@ brew "zsh-completions"
 
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
 cask "kitty"
 
